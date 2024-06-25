@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kiefers/static/css/main.34521c21.css",
+    "main.js": "/kiefers/static/js/main.2f9a849c.js",
+    "static/media/k-logo.svg": "/kiefers/static/media/k-logo.971fd0299069125e317c7dd615a207a3.svg",
+    "index.html": "/kiefers/index.html",
+    "main.34521c21.css.map": "/kiefers/static/css/main.34521c21.css.map",
+    "main.2f9a849c.js.map": "/kiefers/static/js/main.2f9a849c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34521c21.css",
+    "static/js/main.2f9a849c.js"
+  ]
+}
