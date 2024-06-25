@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kiefers/static/css/main.34521c21.css",
-    "main.js": "/kiefers/static/js/main.2f9a849c.js",
-    "static/media/k-logo.svg": "/kiefers/static/media/k-logo.971fd0299069125e317c7dd615a207a3.svg",
-    "index.html": "/kiefers/index.html",
-    "main.34521c21.css.map": "/kiefers/static/css/main.34521c21.css.map",
-    "main.2f9a849c.js.map": "/kiefers/static/js/main.2f9a849c.js.map"
+    "main.css": "/keepers_app/static/css/main.34521c21.css",
+    "main.js": "/keepers_app/static/js/main.bd15b07a.js",
+    "static/media/k-logo.svg": "/keepers_app/static/media/k-logo.971fd0299069125e317c7dd615a207a3.svg",
+    "index.html": "/keepers_app/index.html",
+    "main.34521c21.css.map": "/keepers_app/static/css/main.34521c21.css.map",
+    "main.bd15b07a.js.map": "/keepers_app/static/js/main.bd15b07a.js.map"
   },
   "entrypoints": [
     "static/css/main.34521c21.css",
-    "static/js/main.2f9a849c.js"
+    "static/js/main.bd15b07a.js"
   ]
 }
