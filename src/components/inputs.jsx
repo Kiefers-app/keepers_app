@@ -1,4 +1,5 @@
-import { EyeClose, SearchIcon } from "./icons"
+import { EyeClose, EyeOpen, SearchIcon } from "./icons"
+import React,{useState} from "react"
 
 export const EmailTextbox = () =>{
     return (
@@ -9,11 +10,27 @@ export const EmailTextbox = () =>{
 }
 
 export const PasswordTextbox = () =>{
+
+const [boxtype,setBoxType] = useState("password");
+
+const changeBoxMode = () =>{
+    if(boxtype === "password"){
+        setBoxType("text");
+    }else{
+        setBoxType("password");
+    }
+}
+
+
     return (
 <div className="bg-slate-200 p-2.5 rounded-md w-full my-4 flex justify-between items-center">
-<input type="password" placeholder="Create Password" className="w-full px-2.5 placeholder-slate-500 text-lg bg-transparent outline-none"></input>
-<div className="cursor-pointer">
-<EyeClose c="#64748b" w="20" h="20" />
+<input type={boxtype} placeholder="Password" className="w-full px-2.5 placeholder-slate-500 text-lg bg-transparent outline-none"></input>
+<div onClick={changeBoxMode} className="cursor-pointer">
+{
+    boxtype === "password" 
+    ? <EyeClose c="#64748b" w="20" h="20" />
+    : <EyeOpen c="#64748b" w="20" h="20" />
+}
 </div>
 </div>
     )

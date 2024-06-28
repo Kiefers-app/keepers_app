@@ -3,19 +3,19 @@ import { ArrowLeftSmall, SmileIcon,SendIcon,ArrowHeadLeft } from "./icons"
 
 export const Button1 = (props) =>{
     return (
-        <button className="my-2 text-center w-full bg-red-500 p-2.5 text-white hover:bg-red-600 rounded-xl shadow-md">{props.text}</button>
+        <button onClick={props.click} className="my-2 text-center w-full bg-red-500 p-2.5 text-white hover:bg-red-600 rounded-xl shadow-md">{props.text}</button>
     )
 }
 
 export const Button2 = (props) =>{
     return (
-        <button className="my-2 text-center w-full bg-gray-200 p-2.5 text-gray-800 hover:bg-gray-100 rounded-xl">{props.text}</button>
+        <button onClick={props.click} className="my-2 text-center w-full bg-gray-200 p-2.5 text-gray-800 hover:bg-gray-100 rounded-xl">{props.text}</button>
     )
 }
 
 export const ButtonGo = (props) =>{
     return (
-        <div className="my-2 flex justify-center items-center space-x-2 text-center w-full bg-red-500 p-2.5 text-white hover:bg-red-600 rounded-xl shadow-md">
+        <div onClick={props.click} className="my-2 flex justify-center items-center space-x-1 text-center w-full bg-red-500 p-2.5 text-white hover:bg-red-600 rounded-xl shadow-md">
  <button >{props.text}</button>
  <ArrowLeftSmall w="20" h="20" c="#fff" />
         </div>
@@ -36,7 +36,7 @@ export const ButtonGo2 = (props) =>{
 
 export const ButtonGuest = (props) =>{
     return (
-        <div className="font-medium my-2 flex justify-center items-center space-x-2 text-center w-full bg-gray-200 p-2.5 text-gray-900 hover:bg-gray-300 rounded-xl">
+        <div onClick={props.click} className="font-medium my-2 flex justify-center items-center space-x-2 text-center w-full bg-gray-200 p-2.5 text-gray-900 hover:bg-gray-300 rounded-xl">
  <SmileIcon w="20" h="20" c="#111827" />
  <button >{props.text}</button>
         </div>

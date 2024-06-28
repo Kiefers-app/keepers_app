@@ -23,9 +23,19 @@ export const NormalNav = (props) =>{
 
 
 export const AdvanceNav = (props) =>{
+    const Gobackba = () => {
+         var AppMessage = {
+        type: "GO_BACK",
+        path: "home"
+    };
+    var messageString = JSON.stringify(AppMessage);
+    window.ReactNativeWebView.postMessage(messageString);
+      }
+
+
     return (
         <div className="bg-white z-50 w-full px-2.5 py-4 absolute sticky-0 top-0 flex justify-between items-center">
-<div className="cursor-pointer">
+<div onClick={Gobackba} className="hover:bg-red-500 cursor-pointer">
 <ArrowLeftBig w={25} h={25} c="#404040" />
 </div>
 
@@ -65,9 +75,19 @@ export const ChatNav = (props) =>{
 }
 
 export const SearchNav = (props) => {
+
+    const GobackfromSearch = () => {
+         var AppMessage = {
+        type: "GO_BACK",
+        path: "home"
+    };
+    var messageString = JSON.stringify(AppMessage);
+    window.ReactNativeWebView.postMessage(messageString);
+      }
+
     return (
         <div className="bg-white z-50 w-full px-2.5 py-4 absolute sticky-0 top-0 flex justify-between items-center space-x-2.5">
-        <div className="cursor-pointer">
+        <div onClick={GobackfromSearch} className="cursor-pointer">
         <ArrowLeftBig w={25} h={25} c="#404040" />
         </div>
         
