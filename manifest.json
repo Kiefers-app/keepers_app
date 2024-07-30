@@ -1,25 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kiefers Business Suite",
+  "name": "Kiefers Business Suite",
+  "display_override": ["standalone", "minimal-ui"],
+  "display": "fullscreen",
+  "description": "This is an internal tool managed by Kiefers Delivery Services.",
+  "orientation": "natural",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favkeep.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "white",
+  "background_color": "#ef4444"
 }
