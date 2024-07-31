@@ -23,6 +23,6 @@
     }
   ],
   "start_url": ".",
-  "theme_color": "white",
-  "background_color": "red"
+  "theme_color": "red",
+  "background_color": "#ef4444"
 }
