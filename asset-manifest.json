@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/keepers_app/static/css/main.17e6b525.css",
-    "main.js": "/keepers_app/static/js/main.263b323b.js",
+    "main.js": "/keepers_app/static/js/main.401ff4a1.js",
     "static/media/gcash.gif": "/keepers_app/static/media/gcash.2320dc48191186513020.gif",
     "static/media/k-logo.svg": "/keepers_app/static/media/k-logo.971fd0299069125e317c7dd615a207a3.svg",
     "static/media/gcash.png": "/keepers_app/static/media/gcash.7a5ead65a7ffab713e54.png",
     "index.html": "/keepers_app/index.html",
     "main.17e6b525.css.map": "/keepers_app/static/css/main.17e6b525.css.map",
-    "main.263b323b.js.map": "/keepers_app/static/js/main.263b323b.js.map"
+    "main.401ff4a1.js.map": "/keepers_app/static/js/main.401ff4a1.js.map"
   },
   "entrypoints": [
     "static/css/main.17e6b525.css",
-    "static/js/main.263b323b.js"
+    "static/js/main.401ff4a1.js"
   ]
 }
