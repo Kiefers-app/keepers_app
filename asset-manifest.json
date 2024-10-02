@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/keepers_app/static/css/main.86a62eb4.css",
-    "main.js": "/keepers_app/static/js/main.45cff90c.js",
+    "main.css": "/keepers_app/static/css/main.7f3da867.css",
+    "main.js": "/keepers_app/static/js/main.c9331674.js",
     "static/media/gcash.gif": "/keepers_app/static/media/gcash.2320dc48191186513020.gif",
     "static/media/k-logo.svg": "/keepers_app/static/media/k-logo.971fd0299069125e317c7dd615a207a3.svg",
     "static/media/gcash.png": "/keepers_app/static/media/gcash.7a5ead65a7ffab713e54.png",
     "index.html": "/keepers_app/index.html",
-    "main.86a62eb4.css.map": "/keepers_app/static/css/main.86a62eb4.css.map",
-    "main.45cff90c.js.map": "/keepers_app/static/js/main.45cff90c.js.map"
+    "main.7f3da867.css.map": "/keepers_app/static/css/main.7f3da867.css.map",
+    "main.c9331674.js.map": "/keepers_app/static/js/main.c9331674.js.map"
   },
   "entrypoints": [
-    "static/css/main.86a62eb4.css",
-    "static/js/main.45cff90c.js"
+    "static/css/main.7f3da867.css",
+    "static/js/main.c9331674.js"
   ]
 }
