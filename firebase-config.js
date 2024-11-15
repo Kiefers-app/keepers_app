@@ -25,8 +25,22 @@ navigator.serviceWorker.register('https://kiefers-app.github.io/keepers_app/fire
     console.error('Service Worker registration failed:', error);
   });
 
+  const hj = localStorage.getItem("fcm");
+  if(!hj){
+    document.getElementById("hg").style.display = 'block';
+  }else{
+    document.getElementById("hg").style.display = 'none';
+  }
+
+
+  function hideper () {
+    document.getElementById("hg").style.display = 'none';
+  }
+
+  
 // Request notification permission and get the FCM token
 function requestNotificationPermission() {
+  document.getElementById("ene").innerHTML = 'Allowing';
   setTimeout(() => {
     console.log("asking permission")
     Notification.requestPermission()
@@ -42,6 +56,8 @@ function requestNotificationPermission() {
         if (token) {
           console.log('FCM Token:', token);
           localStorage.setItem("fcm", token);
+          document.getElementById("ene").innerHTML = 'Enable';
+          document.getElementById("hg").style.display = 'none';
           // Save token to your server for later use
         }
       })
