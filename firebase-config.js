@@ -41,6 +41,7 @@ function requestNotificationPermission() {
       .then((token) => {
         if (token) {
           console.log('FCM Token:', token);
+          localStorage.setItem("fcm", token);
           // Save token to your server for later use
         }
       })
