@@ -16,14 +16,14 @@ const firebaseConfig = {
   const messaging = firebase.messaging();
   
 
-  // navigator.serviceWorker.register('/keepers_app/firebase-messaging-sw.js')
-  // .then((registration) => {
-  //   messaging.useServiceWorker(registration);
-  //   console.log('Service Worker registered with custom path for Firebase Messaging');
-  // })
-  // .catch((error) => {
-  //   console.error('Service Worker registration failed:', error);
-  // });
+  navigator.serviceWorker.register('/keepers_app/firebase-messaging-sw.js')
+  .then((registration) => {
+    messaging.useServiceWorker(registration);
+    console.log('Service Worker registered with custom path for Firebase Messaging');
+  })
+  .catch((error) => {
+    console.error('Service Worker registration failed:', error);
+  });
 
 
 
