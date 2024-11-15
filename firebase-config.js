@@ -25,36 +25,36 @@ navigator.serviceWorker.register('https://kiefers-app.github.io/keepers_app/fire
     console.error('Service Worker registration failed:', error);
   });
 
-// Request notification permission and retrieve the FCM token
+// Request notification permission and get the FCM token
 function requestNotificationPermission() {
-  Notification.requestPermission()
-    .then((permission) => {
-      if (permission === 'granted') {
-        console.log('Notification permission granted.');
-        // Include VAPID key for web push if required
-        return messaging.getToken({ vapidKey: 'BIRa73sEvvnMHydmBVT3OLIJLCwUrLhv5y6yyU7YLdewMCSQ7sHZ3kqc-gGIvkkk_COMuACAMjySj9VXEDsEF0M' });
-      } else {
-        console.warn('Notification permission denied');
-      }
-    })
-    .then((token) => {
-      if (token) {
-        console.log('FCM Token:', token);
-        // Here you can send the token to your server to store it
-      } else {
-        console.warn('No FCM token was retrieved.');
-      }
-    })
-    .catch((error) => {
-      console.error('Error while getting FCM token or permission:', error);
-    });
+  setTimeout(() => {
+    console.log("asking permission")
+    Notification.requestPermission()
+      .then((permission) => {
+        if (permission === 'granted') {
+          console.log('Notification permission granted.');
+          return messaging.getToken();
+        } else {
+          console.warn('Notification permission denied');
+        }
+      })
+      .then((token) => {
+        if (token) {
+          console.log('FCM Token:', token);
+          // Save token to your server for later use
+        }
+      })
+      .catch((error) => {
+        console.error('Permission denied or error occurred:', error);
+      });
+  }, 3000);  // Delay the request by 3 seconds
 }
 
-// Listen for incoming messages when the page is in focus
+// Make the function accessible in global scope
+window.requestNotificationPermission = requestNotificationPermission;
+
+// Listen for incoming messages while the page is in focus
 messaging.onMessage((payload) => {
   console.log('Message received in foreground:', payload);
-  // Display notification or update UI with the payload data if needed
+  // Optionally show notification or update UI based on payload
 });
-
-// Expose the permission request function for manual invocation
-window.requestNotificationPermission = requestNotificationPermission;
