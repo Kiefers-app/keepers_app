@@ -40,7 +40,7 @@ navigator.serviceWorker.register('https://kiefers-app.github.io/keepers_app/fire
   
 // Request notification permission and get the FCM token
 function requestNotificationPermission() {
-  document.getElementById("ene").innerHTML = 'Allowing';
+  document.getElementById("ene").innerHTML = 'Allowing..';
   setTimeout(() => {
     console.log("asking permission")
     Notification.requestPermission()
