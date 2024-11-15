@@ -57,5 +57,22 @@ window.requestNotificationPermission = requestNotificationPermission;
 // Listen for incoming messages while the page is in focus
 messaging.onMessage((payload) => {
   console.log('Message received in foreground:', payload);
-  // Optionally show notification or update UI based on payload
+
+  // Optional: Show a notification with the Notification API
+  const notificationTitle = payload.notification?.title || 'New Notification';
+  const notificationOptions = {
+    body: payload.notification?.body || 'You have a new message.',
+    icon: '512.png',  // Specify a default icon if needed
+  };
+
+  // Display the notification if Notification permissions are granted
+  if (Notification.permission === 'granted') {
+    const notification = new Notification(notificationTitle, notificationOptions);
+
+    // Optionally handle click to open a URL
+    notification.onclick = (event) => {
+      event.preventDefault(); // Prevent the default action (which is typically focus)
+      window.open(notificationOptions.data.url, '_blank');
+    };
+  }
 });
