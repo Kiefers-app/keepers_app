@@ -29,12 +29,12 @@ navigator.serviceWorker.register('https://kiefers-app.github.io/keepers_app/fire
   if(!hj){
     document.getElementById("hg").style.display = 'block';
   }else{
-    document.getElementById("hg").style.display = 'none';
+    document.getElementById("hg").remove();
   }
 
 
   function hideper () {
-    document.getElementById("hg").style.display = 'none';
+    document.getElementById("hg").remove();
   }
 
   
