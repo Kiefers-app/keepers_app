@@ -77,13 +77,20 @@ messaging.onMessage((payload) => {
   // Optional: Show a notification with the Notification API
   const notificationTitle = payload.notification?.title || 'New Notification';
   const notificationOptions = {
-    body: payload.notification?.body || 'You have a new message.',
-    icon: '512.png',  // Specify a default icon if needed
+    body: payload.notification?.body ?? 'You have a new message.',
+    icon: 'https://kiefers-app.github.io/keepers_app/512.png',  // Specify a default icon if needed
+    data: {
+      url: 'https://kiefers-app.github.io/keepers_app/' // URL to open when clicked
+    }
   };
 
   // Display the notification if Notification permissions are granted
   if (Notification.permission === 'granted') {
     const notification = new Notification(notificationTitle, notificationOptions);
+
+    // Play sound when the notification is displayed
+    const audio = new Audio('https://kiefers-app.github.io/keepers_app/ding.mp3'); // Provide the URL of the sound file
+    audio.play().catch((error) => console.error('Audio play failed:', error));
 
     // Optionally handle click to open a URL
     notification.onclick = (event) => {
@@ -92,3 +99,4 @@ messaging.onMessage((payload) => {
     };
   }
 });
+

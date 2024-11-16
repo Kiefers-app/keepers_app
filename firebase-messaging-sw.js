@@ -17,13 +17,42 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
-  console.log('Received background message: ', payload);
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
-    icon: '512.png' // Update with your icon path if needed
+    icon: '512.png',
+    data: {
+      url: 'https://kiefers-app.github.io/keepers_app/',
+      sound: 'https://kiefers-app.github.io/keepers_app/ding.mp3'
+    }
   };
-
   // Show notification
   self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
+// Listen for notification click event
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close(); // Close the notification
+
+  // Open the URL specified in the notification data
+  event.waitUntil(
+    clients.matchAll({ type: 'window' }).then((clientList) => {
+      for (const client of clientList) {
+        // Check if the PWA or web app is already open
+        if (client.url === event.notification.data.url && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      // If not, open a new window/tab with the URL
+      if (clients.openWindow) {
+        return clients.openWindow(event.notification.data.url);
+      }
+    })
+  );
+});
+
+// Play sound when notification is displayed
+self.addEventListener('notificationclose', () => {
+  const audio = new Audio('https://kiefers-app.github.io/keepers_app/ding.mp3');
+  audio.play().catch((error) => console.error('Error playing sound:', error));
 });
