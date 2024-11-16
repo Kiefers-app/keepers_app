@@ -50,6 +50,7 @@ function requestNotificationPermission() {
           return messaging.getToken();
         } else {
           console.warn('Notification permission denied');
+          document.getElementById("hg").style.display = 'block';
         }
       })
       .then((token) => {
@@ -62,6 +63,7 @@ function requestNotificationPermission() {
         }
       })
       .catch((error) => {
+        document.getElementById("hg").style.display = 'block';
         console.error('Permission denied or error occurred:', error);
       });
   }, 3000);  // Delay the request by 3 seconds
