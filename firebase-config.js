@@ -33,8 +33,9 @@ navigator.serviceWorker.register('https://kiefers-app.github.io/keepers_app/fire
   }
 
   const currentUrl = window.location.href;
+  console.log(currentUrl)
   if(window.location.href == 'https://kiefers-app.github.io/keepers_app/#/tracker/' || window.location.href == 'https://kiefers-app.github.io/keepers_app/#/setlocation/'){
-    document.getElementById("hg").remove();
+    //document.getElementById("hg").remove();
   }
 
   function hideper () {
